@@ -1,0 +1,15 @@
+#wrapper {
+  width: 95%;
+  margin: 0px auto;
+}
+h1 {
+  color: #F0F;
+  font-family: "Times New Roman";
+}
+body {
+  font-family: Verdana;
+}
+p {
+  color: #333;
+  font-family: Verdana;
+}
