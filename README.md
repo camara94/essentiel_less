@@ -1,2 +1,4 @@
 # essentiel_less
 Dans ce cours, nous allons découvrir ensemble l'essentiel de less.
+
+En tant que développeur ou intégrateur web, vous souhaiteriez que le langage CSS soit doté de fonctions d'automatisation ou de la possibilité d'écrire du code de manière imbriquée. LESS étend le langage CSS en lui fournissant des composants comme des variables, des mixins, des opérateurs et des fonctions natives. Dans cette formation, Damien Bruyndonckx vous fera découvrir les notions de base de LESS ainsi que des méthodes pour compiler votre code LESS en code CSS. Vous vous initierez aux principes fondamentaux du langage avant de vous concentrer sur toute la puissance des mixins. Puis vous travaillerez sur un cas pratique en appliquant LESS dans un véritable projet web. À l'issue de cette formation, vous serez capable d'exploiter l'automatisation de LESS pour écrire votre code CSS, plus rapidement et avec plus d'efficacité.
