@@ -1,0 +1,22 @@
+{
+  "name": "essentiel_less",
+  "version": "1.0.0",
+  "description": "Dans ce cours, nous allons découvrir ensemble l'essentiel de less.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camara94/essentiel_less.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camara94/essentiel_less/issues"
+  },
+  "homepage": "https://github.com/camara94/essentiel_less#readme",
+  "dependencies": {
+    "less": "^4.1.1"
+  }
+}
