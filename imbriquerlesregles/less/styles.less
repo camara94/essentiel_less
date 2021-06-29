@@ -1,0 +1,38 @@
+//out: ../css/styles.css
+
+//colors
+@linkBkg: #1880CA;
+@linkColor: #9AC617;
+
+//dimensions
+@siteWidth: 95%;
+
+//size
+@linkSize: 1.4em;
+
+#wrapper {
+    width: @siteWidth;
+    margin: 0px auto;
+}
+
+#main {
+    background-color: @linkBkg;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        li {
+            display: inline-block;
+            a {
+                color: @linkColor;
+                display: block;
+                font-size: @linkSize;
+                padding: 10px;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }// end :hover
+            } // end a
+        } // end li
+    } // end ul
+} //end nav
