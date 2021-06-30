@@ -16,12 +16,19 @@
 @boderWidth: 40px;
 
 //mixin
-.borderRadius(@borderValue: @boderWidth) {
-    -webkit-border-radius: @borderValue;
-    -moz-border-radius: @borderValue;
-    -ms-border-radius: @borderValue;
-    -o-border-radius: @borderValue;
-    border-radius: @borderValue;
+.borderRadius() {
+    .borderRadius(@boderWidth; @boderWidth; @boderWidth; @boderWidth);
+}
+.borderRadius(@border) {
+    .borderRadius(@border; @border; @border; @border);
+}
+
+.borderRadius(@topLeft; @topRight; @bottoomRight; @bottoomLeft) {
+    -webkit-border-radius: @topLeft @topRight @bottoomRight @bottoomLeft;
+    -moz-border-radius: @topLeft @topRight @bottoomRight @bottoomLeft;
+    -ms-border-radius: @topLeft @topRight @bottoomRight @bottoomLeft;
+    -o-border-radius: @topLeft @topRight @bottoomRight @bottoomLeft;
+    border-radius: @topLeft @topRight @bottoomRight @bottoomLeft;
 }
 
 #wrapper {
@@ -36,20 +43,20 @@ header {
     background-color: @headerColor;
     padding: @defaultPadding;
     margin: @defaultMargin;
-    .borderRadius(30px);
+    .borderRadius();
 }
 
 section {
     background-color: @sectionColor;
     padding: @defaultPadding;
     margin: @defaultMargin;
-    .borderRadius();
+    .borderRadius(50px);
 }
 
 footer {
     background-color: @footerColor;
     padding: @defaultPadding;
     margin: @defaultMargin;
-    .borderRadius(30px);
+    .borderRadius(0px; 50px; 0px; 30px);
 }
 
