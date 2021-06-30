@@ -1,0 +1,16 @@
+//main: styles.less
+
+header {
+    background-image: linear-gradient(190deg,
+        @headerColor, saturate( @headerColor, 80%),
+        desaturate( @headerColor, 80%),
+        lighten(@headerColor, 40%),
+        darken( @headerColor, 60% )
+        );
+    padding: 20px;
+    h1 {
+        color: @titleColor;
+        font: @titleFont;
+        font-size: @titleSize;
+    } // end h1
+} // end header

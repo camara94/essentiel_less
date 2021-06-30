@@ -1,0 +1,38 @@
+#wrapper {
+  width: 960px;
+  margin: 0px auto;
+}
+header {
+  background-image: linear-gradient(190deg, #f3f311, #ffff05, #8f8f75, #fdfdd3, #000000);
+  padding: 20px;
+}
+header h1 {
+  color: #F00;
+  font: "Times New Roman";
+  font-size: 2rem;
+}
+p {
+  color: #333;
+  font: Verdana;
+  font-size: 1rem;
+}
+nav {
+  background-color: #1B80CA;
+  border: 3px solid #F00;
+}
+nav ul {
+  margin: 0px;
+  padding: 0px;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  color: #9AC617;
+  display: block;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
