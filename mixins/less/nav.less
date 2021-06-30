@@ -1,0 +1,22 @@
+//main: styles.less
+
+nav {
+    background-color: @linkbkg;
+    border: @baseBorder solid @titleColor;
+    ul {
+        margin: 0px;
+        padding: 0px;
+        li {
+            display: inline-block;
+            a {
+                color: @linkColor;
+                display: block;
+                font-size: @linkSize;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            } // end a
+        } // end li
+    } // end ul
+} // end nav
