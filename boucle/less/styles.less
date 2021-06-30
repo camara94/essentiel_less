@@ -1,0 +1,91 @@
+//out: ../css/styles.css
+
+//variables
+
+//colors
+@pageColor: rgba(64, 158, 77, 0.932);
+@headerColor: red;
+@sectionColor: #f8f8f8;
+@footerColor: lightgreen;
+
+@defaultPadding: 20px;
+@defaultMargin: 10px  0px;
+@ncols: 6;
+
+//dimensions
+@siteWidth: 960px;
+@boderWidth: 40px;
+
+
+//mixin
+
+.makeTrans(@couleur; @opacity) {
+    @newColor: rgba( red(@couleur), green(@couleur), blue(@couleur), @opacity );
+};
+
+.makeCols(@cols: @ncols; @i: 1) when(@i  <= @cols) {
+    .col-@{i} {
+       width: (@i * 98% / @cols);
+       display: inline-block;
+       vertical-align: top;
+       box-sizing: border-box;
+    }
+    .makeCols(@cols, (@i + 1))
+}
+.makeCols();
+
+
+.borderRadius() {
+    .borderRadius(@boderWidth; @boderWidth; @boderWidth; @boderWidth);
+}
+
+.borderRadius(@border) when(isNumber(@border) ) {
+    .borderRadius(@border; @border; @border; @border);
+}
+.borderRadius(top) {
+    .borderRadius(@boderWidth; @boderWidth; 0px; 0px);
+}
+.borderRadius(bottom) {
+    .borderRadius(0px; 0px; @boderWidth; @boderWidth);
+}
+
+.borderRadius(@topLeft; @topRight; @bottoomRight; @bottoomLeft) {
+    -webkit-border-radius: @topLeft @topRight @bottoomRight @bottoomLeft;
+    -moz-border-radius: @topLeft @topRight @bottoomRight @bottoomLeft;
+    -ms-border-radius: @topLeft @topRight @bottoomRight @bottoomLeft;
+    -o-border-radius: @topLeft @topRight @bottoomRight @bottoomLeft;
+    border-radius: @topLeft @topRight @bottoomRight @bottoomLeft;
+}
+
+
+
+#wrapper {
+    width: @siteWidth;
+    margin: 0px auto;
+}
+body {
+    background-color: @pageColor;
+}
+
+header {
+    .makeTrans(@headerColor, 0.8);
+    background-color: @newColor;
+    padding: @defaultPadding;
+    margin: @defaultMargin;
+    .borderRadius(bottom);
+}
+
+section {
+    background-color: @sectionColor;
+    padding: @defaultPadding;
+    margin: @defaultMargin;
+    .borderRadius(50px);
+}
+
+footer {
+    background-color: @footerColor;
+    padding: @defaultPadding;
+    margin: @defaultMargin;
+    .borderRadius(top);
+}
+
