@@ -1,0 +1,55 @@
+//out: ../css/styles.css
+
+//variables
+
+//colors
+@pageColor: rgba(64, 158, 77, 0.932);
+@headerColor: red;
+@sectionColor: #f8f8f8;
+@footerColor: lightgreen;
+
+@defaultPadding: 20px;
+@defaultMargin: 10px  0px;
+
+//dimensions
+@siteWidth: 960px;
+@boderWidth: 40px;
+
+//mixin
+.borderRadius(@borderValue: @boderWidth) {
+    -webkit-border-radius: @borderValue;
+    -moz-border-radius: @borderValue;
+    -ms-border-radius: @borderValue;
+    -o-border-radius: @borderValue;
+    border-radius: @borderValue;
+}
+
+#wrapper {
+    width: @siteWidth;
+    margin: 0px auto;
+}
+body {
+    background-color: @pageColor;
+}
+
+header {
+    background-color: @headerColor;
+    padding: @defaultPadding;
+    margin: @defaultMargin;
+    .borderRadius(30px);
+}
+
+section {
+    background-color: @sectionColor;
+    padding: @defaultPadding;
+    margin: @defaultMargin;
+    .borderRadius();
+}
+
+footer {
+    background-color: @footerColor;
+    padding: @defaultPadding;
+    margin: @defaultMargin;
+    .borderRadius(30px);
+}
+
