@@ -19,8 +19,15 @@
 .borderRadius() {
     .borderRadius(@boderWidth; @boderWidth; @boderWidth; @boderWidth);
 }
-.borderRadius(@border) {
+
+.borderRadius(@border) when(isNumber(@border) ) {
     .borderRadius(@border; @border; @border; @border);
+}
+.borderRadius(top) {
+    .borderRadius(@boderWidth; @boderWidth; 0px; 0px);
+}
+.borderRadius(bottom) {
+    .borderRadius(0px; 0px; @boderWidth; @boderWidth);
 }
 
 .borderRadius(@topLeft; @topRight; @bottoomRight; @bottoomLeft) {
@@ -43,7 +50,7 @@ header {
     background-color: @headerColor;
     padding: @defaultPadding;
     margin: @defaultMargin;
-    .borderRadius();
+    .borderRadius(bottom);
 }
 
 section {
@@ -57,6 +64,6 @@ footer {
     background-color: @footerColor;
     padding: @defaultPadding;
     margin: @defaultMargin;
-    .borderRadius(0px; 50px; 0px; 30px);
+    .borderRadius(top);
 }
 
